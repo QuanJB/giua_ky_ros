@@ -47,17 +47,20 @@ def generate_launch_description():
         output='screen'
     )
 
+    rviz_config_file = os.path.join(pkg_path, 'rviz', 'config.rviz')
+
     # Launch RViz
     rviz = Node(
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        output='screen'
+        output='screen',
+        arguments=['-d', rviz_config_file],
+        parameters=[{'use_sim_time': True}]
     )
 
     return LaunchDescription([
         node_robot_state_publisher,
-        #node_joint_state_publisher_gui,
         gazebo,
         spawn_entity,
         rviz,
