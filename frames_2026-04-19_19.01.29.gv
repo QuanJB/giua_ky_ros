@@ -1,0 +1,20 @@
+digraph G {
+"odom" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 100.2\nBuffer length: 5.01\nMost recent transform: 163.909\nOldest transform: 158.899\n"];
+"chassis" -> "arm_base"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassis"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_footprint" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"link2" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"link1" -> "link2"[label=" Broadcaster: default_authority\nAverage rate: 110.6\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"chassis" -> "lidar_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"chassis" -> "front_left_steer_link"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"front_left_steer_link" -> "front_left_wheel"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"chassis" -> "front_right_steer_link"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"front_right_steer_link" -> "front_right_wheel"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"arm_base" -> "link1"[label=" Broadcaster: default_authority\nAverage rate: 110.6\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"chassis" -> "rear_left_wheel"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+"chassis" -> "rear_right_wheel"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.0\nMost recent transform: 163.899\nOldest transform: 158.899\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1776600089.9190283"[ shape=plaintext ] ;
+}->"odom";
+}
