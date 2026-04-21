@@ -53,9 +53,8 @@
         </joint>
         <link name="${prefix}_wheel">
             <visual>
-                <origin xyz="0 0 0.045" rpy="${pi/2} 0 0"/>
                 <geometry>
-                    <mesh filename="package://robot_description/mesh/wheel.dae" scale="0.005 0.005 0.005"/>
+                    <cylinder radius="${wheel_radius}" length="0.05"/>
                 </geometry>
             </visual>
             <collision>
